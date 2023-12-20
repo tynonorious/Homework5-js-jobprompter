@@ -71,4 +71,58 @@ const departments = {
     }
 }
 
-console.log(departments);
+// Opdracht1
+
+// console.log(departments);
+// console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers")
+// console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description)
+// console.log("De afdeling Customer Service heeft " + departments['customer-service'].numberOfEmployees + " medewerkers")
+// console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + departments.sales.jobs[1].description)
+
+// Opdracht2
+
+// const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+// console.log(userInput);
+
+// if (userInput == 'marketing' || userInput == 'sales' || userInput == 'customer-service') {
+//     console.log('Je koos ' + userInput + ". " + departments[userInput].description);
+// } else {
+//     console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
+// }
+
+// Opdracht3
+
+// const functieTitel = prompt("Je koos " + userInput + ". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n 0: " +  departments[userInput].jobs[0].title + ", \n 1: " +  departments[userInput].jobs[1].title + ",\n 2: " +  departments[userInput].jobs[2].title + ",\n 3: " +  departments[userInput].jobs[3].title);
+// if (functieTitel == 0 || functieTitel == 1 || functieTitel == 2 || functieTitel == 3) {
+//     console.log("Je koos " + departments[userInput].jobs[functieTitel].title+ ". Een uitdagende rol!" + departments[userInput].jobs[functieTitel].description)
+// } else {
+//     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+// }
+
+// Opdracht4
+
+// console.log(userInput + " is een leuke afdeling om te werken. Er werken op dit moment " + departments[userInput].numberOfEmployees + " medewerkers")
+
+// Opdracht5
+
+// document.getElementById('role-title').textContent = 'Tyne!';
+// document.getElementById('department-description').textContent = 'Beef Hachee';
+
+const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+if (userInput == 'marketing' || userInput == 'sales' || userInput == 'customer-service') {
+    document.getElementById('department-description').textContent = departments[userInput].description;
+    const functieTitel = prompt("Je koos " + userInput + ". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n 0: " +  departments[userInput].jobs[0].title + ", \n 1: " +  departments[userInput].jobs[1].title + ",\n 2: " +  departments[userInput].jobs[2].title + ",\n 3: " +  departments[userInput].jobs[3].title);
+    if (functieTitel == 0 || functieTitel == 1 || functieTitel == 2 || functieTitel == 3) {
+        document.getElementById('role-description').textContent = departments[userInput].jobs[functieTitel].title;
+        document.getElementById('role-title').textContent = departments[userInput].jobs[functieTitel].description
+    } else {
+        document.getElementById('error-message').textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.";
+    }
+} else {
+    document.getElementById('error-message').textContent = 'Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.';
+}
+
+
+// document.getElementById('role-title').textContent =
+
+
